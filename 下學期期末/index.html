@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>網頁範本</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            background-color: #FFECF5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav img {
+            width: 50px;
+            cursor: pointer;
+        }
+        .nav button {
+            margin-left: 10px;
+            background-color: #FF79BC;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+        }
+        .full-width {
+            width: 100%;
+        }
+        .half-width {
+            width: 50%;
+        }
+        .third-height {
+            height: 66%;
+        }
+        .left {
+            float: left;
+        }
+    </style>
+    <script>
+        function goToPage(page) {
+            var pages = document.querySelectorAll('.container');
+            pages.forEach(p => p.style.display = 'none');
+            document.querySelector(page).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 第一頁 封面 -->
+    <div id="page1" class="container" onclick="goToPage('#page2')">
+        <img src="封面圖.jpg" class="full-width" alt="封面圖片"><!-- 插入封面圖片 -->
+    </div>
+
+
+    <!-- 第二頁 簡介 -->
+    <div id="page2" class="container" style="display: none;">
+        <div class="nav">
+            <img src="左上圖標.jpg" onclick="goToPage('#page1')" alt="回到封面圖片"><!-- 插入左上角圖片 -->
+            <div>
+                <button onclick="goToPage('#page2')">簡介</button>
+                <button onclick="goToPage('#page3')">團體介紹</button>
+                <button onclick="goToPage('#page4')">角色介紹</button>
+                <button onclick="goToPage('#page5')">外部連結</button>
+            </div>
+        </div>
+        <h1>簡介</h1><!-- 插入簡介 -->
+        <p>《偶像星願》（日語：アイドリッシュセブン，英語：IDOLiSH7）是萬代南夢宮製作的女性向音樂類手機遊戲，角色原案由種村有菜擔任，歌曲製作由Lantis擔任。
+IDOLiSH7是一個集小說、漫畫、遊戲、音樂、動畫為一體的多平台大型企劃。2021年7月4日起，第3期Third BEAT! 第一季度開播...</p><!-- 插入文章內容 -->
+        <h1>遊戲介紹</h1><!-- 插入遊戲介紹 -->
+        <p>《IDOLiSH7》（アイドリッシュセブン）是由推出過偶像大師系列等大人氣作品的萬代南夢宮（BANDAINAMCO Online）公司發行的女性向男團偶像音樂類手機遊戲。遊戲中玩家所扮演的角色是小鳥遊事務所的經紀人，負責社內男性偶像組合IDOLiSH7，與7名新人偶像一起向着成為超級明星而努力拼搏！除了小鳥遊事務所以外，另外還有一個對手事務所——八乙女事務所，負責對手團TRIGGER的培養。
+遊戲集合了音樂節奏、文字冒險AVG、卡遊等多種遊戲元素，同時也公佈了包括小野賢章、齊藤壯馬、KENN、羽多野涉等在內的豪華配音陣容。</p><!-- 插入文章內容 -->
+        <h1>故事</h1><!-- 插入故事 -->
+        <p>IDOLiSH7是由七位背景各不相同的少年組成的團體，主要角色為主唱七瀨陸。七瀨陸為了找尋哥哥的真相而成為偶像，其餘六位成員也各有著想成為偶像的原因與苦衷。隨著IDOLiSH7的成長，七位少年共同經歷了各種阻礙，而產生了堅強的羈絆。</p><!-- 插入文章內容 -->
+    </div>
+
+
+   <!-- 第三頁 團體介紹 -->
+<div id="page3" class="container" style="display: none;">
+    <div class="nav">
+        <img src="左上圖標.jpg" onclick="goToPage('#page1')" alt="回到封面圖片"><!-- 插入左上角圖片 -->
+        <div>
+            <button onclick="goToPage('#page2')">簡介</button>
+            <button onclick="goToPage('#page3')">團體介紹</button>
+            <button onclick="goToPage('#page4')">角色介紹</button>
+            <button onclick="goToPage('#page5')">外部連結</button>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; padding: 20px;">
+        <img src="團體圖.jpg" class="half-width third-height left" alt="團體介紹圖片"><!-- 插入團體介紹圖片 -->
+        <div class="half-width" style="text-align: left;">
+            <h2 style="margin-left: 20px;">團體介紹-Re:vale</h2> <!-- 新增的中標題，並將樣式設為左對齊 -->
+            <p style="margin-left: 20px;">Re:vale是由百（モモ）跟千（ユキ）所組成的雙人偶像團體，新成立於岡崎事務所出道，因活躍於綜藝節目或是電影、連續劇等多個領域，不論男女老少都有一群莫大的支持群眾。而在國內最大的音樂祭典「BLACK OR WHITE」中靠著具備的實力獲得總合優勝的關係，目前也作為“絕對王者”的頂尖偶像君臨著。</p><!-- 插入文章內容 -->
+        </div>
+    </div>
+</div>
+
+
+<!-- 第四頁 角色介紹 -->
+<div id="page4" class="container" style="display: none;">
+    <div class="nav">
+        <img src="左上圖標.jpg" onclick="goToPage('#page1')" alt="回到封面圖片"><!-- 插入左上角圖片 -->
+        <div>
+            <button onclick="goToPage('#page2')">簡介</button>
+            <button onclick="goToPage('#page3')">團體介紹</button>
+            <button onclick="goToPage('#page4')">角色介紹</button>
+            <button onclick="goToPage('#page5')">外部連結</button>
+        </div>
+    </div>
+    <div style="width: 33.33%; float: left; text-align: center;">
+        <h2 style="margin-top: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left;">百 MOMO</h2>
+        <img src="百.jpg" style="width: 180%;" class="half-width left" alt="角色1圖片"><!-- 插入角色1圖片 -->
+    </div>
+    <div style="width: 66.66%; float: left; padding-left: 10px;">
+        <p>百（モモ，Momo/Sunohara Momose，配音：保志總一朗（日本））<br>
+            身高：173cm<br>
+            生日：11月11日<br>
+            年齡：25歲<br>
+            記號：反覆記號（Left Repeat Sign，||:）<br>
+            代表顏色：桃紅色<br>
+            喜歡的東西：桃子、蘋果味的氣泡飲品、千<br>
+            討厭的東西：不開心的事<br>
+             本名春原百瀨。<br>
+            詼諧幽默，情緒高昂，是個會觀察周圍情況再行動的人。<br>
+            每當現場氣氛變得緊張時，他都會用他天性的明朗和溫柔讓氣氛緩和。<br>
+            但是對自己的事情卻很笨拙，也會一個人煩惱（尤其跟千有關的事）。<br>
+            高中時期是足球隊的主將，現在也非常喜愛運動，並與三月和龍之介建立一個運動社團，此一運動社團曾被月雲了誤以為是現代的千葉沙龍，而有許多麻煩。<br>
+            檯面上和私底下都與千的關係很好，經常會有百裝傻，千來吐槽這樣的展開。<br>
+            從以前到現在都是萬理的大粉絲。<br>
+            學生時期因為不能踢足球而消沉，但從被姐姐琉璃帶去看Re:vale的表演之後便成為一個大粉絲。最喜歡未完成的我們，曾因為這首曲子寫了一封粉絲信給Re:vale，那封粉絲信現還在千的家中。<br>
+</p><!-- 插入角色1介紹 -->
+    </div>
+    <div style="width: 33.33%; float: left; text-align: center; clear: both;">
+        <h2 style="margin-top: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left;">千 YUKI</h2>
+        <img src="千.jpg" style="width: 180%;" class="half-width left" alt="角色2圖片"><!-- 插入角色2圖片 -->
+    </div>
+    <div style="width: 66.66%; float: left; padding-left: 10px;">
+        <p>千（ユキ，Yuki/Origasa Yukito，配音：立花慎之介（日本））<br>
+            身高：178cm<br>
+            生日：12月24日<br>
+            年齡：26歲<br>
+            記號：反覆記號（Right Repeat Sign，:||）<br>
+            代表顏色：草綠色<br>
+            喜歡的東西：百的裝傻發言<br>
+            討厭的東西：態度驕傲的人、尖銳的物品、蟬<br>
+            對事物毫不動搖，散發著冷酷的氣質，但意外笑點很低，還經常被百的搞笑言行惹得忍不住笑出來。<br>
+            雖然現在是閃耀的頂級偶像，但很照顧後輩，也是個關心他人的內心溫柔之人。<br>
+            由於本身的性格和長相（太好看而搶走他人女友之類的），在學生時期經常被人討厭。<br>
+            負責Re:vale的作曲，也時常擔任吐槽百的角色。<br>
+            在演技上有一定的實力，所以時常出演戲劇或電影。<br>
+            從以前便認識大和，在他出演戲劇時，也對其相當掛心。<br>
+            曾被九條鷹匡找上，但拒絕了。而後便在舞台上差點被燈砸到，但被萬理救下，親眼目睹萬理的臉被燈割傷，而患有尖端恐懼症，在萬理失蹤後，原本打算解散，而後因為百的請求而和百一起繼續進行活 動。<br>
+</p><!-- 插入角色2介紹 -->
+    </div>
+</div>
+
+
+<!-- 第五頁 外部連結 -->
+<div id="page5" class="container" style="display: none;">
+    <div class="nav">
+        <img src="左上圖標.jpg" onclick="goToPage('#page1')" alt="回到封面圖片"><!-- 插入左上角圖片 -->
+        <div>
+            <button onclick="goToPage('#page2')">簡介</button>
+            <button onclick="goToPage('#page3')">團體介紹</button>
+            <button onclick="goToPage('#page4')">角色介紹</button>
+            <button onclick="goToPage('#page5')">外部連結</button>
+        </div>
+    </div>
+    <div style="text-align: center; display: flex; justify-content: space-around;">
+       <a href="https://www.youtube.com/@OGAMI-BANRI" target="_blank" style="width: 30%;">
+            <h2>YOUTUBE</h2>
+            <img src="YT.jpg" style="width: 100%; height: auto; border: 3px solid white;" alt="外部連結圖片1"><!-- 插入外部連結圖片1 -->
+            <h2>https://www.youtube.com/@OGAMI-BANRI</h2>
+        </a>
+        <a href="https://x.com/id7mng_ogami" target="_blank" style="width: 30%;">
+            <h2>X</h2>
+            <img src="XT.jpg" style="width: 100%; height: auto; border: 3px solid white;" alt="外部連結圖片2"><!-- 插入外部連結圖片2 -->
+            <h2>https://x.com/id7mng_ogami</h2>
+        </a>
+       <a href="https://www.facebook.com/iD7Mng.Ogami" target="_blank" style="width: 30%;">
+            <h2>FACEBOOK</h2>
+            <img src="FB.jpg" style="width: 100%; height: auto; border: 3px solid white;" alt="外部連結圖片3"><!-- 插入外部連結圖片3 -->
+            <h2>https://www.facebook.com/iD7Mng.Ogami</h2>
+        </a>
+    </div>
+</div>
